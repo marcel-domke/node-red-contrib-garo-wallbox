@@ -1,0 +1,154 @@
+[
+    {
+        "id": "73fbdf5038b5b6d3",
+        "type": "debug",
+        "z": "c8e846e84af620a0",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9639f656b01e2d21",
+        "type": "inject",
+        "z": "c8e846e84af620a0",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload.mode",
+                "v": "ALWAYS_OFF",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "1ee36c5172458e43"
+            ]
+        ]
+    },
+    {
+        "id": "9075cba27d33f908",
+        "type": "inject",
+        "z": "c8e846e84af620a0",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload.mode",
+                "v": "ALWAYS_ON",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 360,
+        "wires": [
+            [
+                "1ee36c5172458e43"
+            ]
+        ]
+    },
+    {
+        "id": "f36c6012127c57f0",
+        "type": "inject",
+        "z": "c8e846e84af620a0",
+        "name": "6A",
+        "props": [
+            {
+                "p": "payload.current_limit",
+                "v": "6",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 480,
+        "wires": [
+            [
+                "1ee36c5172458e43"
+            ]
+        ]
+    },
+    {
+        "id": "441891b0d4071a48",
+        "type": "inject",
+        "z": "c8e846e84af620a0",
+        "name": "16A",
+        "props": [
+            {
+                "p": "payload.current_limit",
+                "v": "16",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "1ee36c5172458e43"
+            ]
+        ]
+    },
+    {
+        "id": "1ee36c5172458e43",
+        "type": "garo-wallbox",
+        "z": "c8e846e84af620a0",
+        "name": "",
+        "ip": "",
+        "interval": "60",
+        "x": 540,
+        "y": 320,
+        "wires": [
+            [
+                "73fbdf5038b5b6d3"
+            ]
+        ]
+    },
+    {
+        "id": "613ddf531c8aa2e2",
+        "type": "comment",
+        "z": "c8e846e84af620a0",
+        "name": "Switching on / off",
+        "info": "",
+        "x": 340,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e47fcaa23867e42a",
+        "type": "comment",
+        "z": "c8e846e84af620a0",
+        "name": "Setting the charging current",
+        "info": "",
+        "x": 380,
+        "y": 440,
+        "wires": []
+    }
+]
