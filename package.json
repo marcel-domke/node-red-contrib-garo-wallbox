@@ -1,6 +1,6 @@
 {
   "name": "@marcel-domke/node-red-contrib-garo-wallbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A unofficial Node-RED node for receiving real-time data and controlling your Garo Wallbox.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/marcel-domke/node-red-contrib-garo-wallbox.git"
   },
-  "keywords": ["node-red", "garo", "pce", "glb", "wallbox"],
+  "keywords": [
+    "node-red",
+    "garo",
+    "pce",
+    "glb",
+    "wallbox"
+  ],
   "author": "Marcel Domke",
   "license": "Apache-2.0",
   "bugs": {
